@@ -1,0 +1,55 @@
+/* ********************************* Start books section styling ***********************************8 */
+body{
+    background: #f7f6f6;
+}
+main .books{
+    width: 100%;
+    margin-top: 50px;
+}
+.books .bookHeading{
+    width: 100%;
+    min-height: 70px;
+    font-size: 1.5rem;
+    color: darkorange;
+    background: #fff;
+    box-shadow: 0px 0px 15px gainsboro;
+    padding: 5px 0;
+
+}
+.bookHeading img{
+    width: 150px;
+    display: inline-block;
+}
+.books .item{
+    height: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #808080cf;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.books .item:hover{
+    transform: scale(1.02);
+}
+.books .item img{
+    width: 70%;
+    height: 83%;
+    margin-bottom: 8px;
+}
+.books .item button{
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+.books .item button a{
+    background-color: orange;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 8px 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    /* margin-top: 5px; */
+}
+.books .item button a:hover{
+    background: darkorange;
+}

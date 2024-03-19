@@ -1,0 +1,776 @@
+/* **********************************************************************************************************
+Common css styling 
+********************************************************************************************************** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+:root{
+    font-size: 10px;
+    --primaryColor: #ee4657;
+    --secondaryColor: #019cd4;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden !important;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+button{
+    border: none;
+}
+.headingText{
+    color: #019cd4;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.headingline{
+    width: 50%;
+    height: 3px;
+    background: #019cd4;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+.heading{
+    background: #019cd4;
+    color: #fff;
+    font-size: 1.6rem;
+}
+.h-100{
+    height: 100%;
+}
+.row-gap{
+    row-gap: 14px;
+}
+.t-end{
+    text-align: end;
+}
+.t-center{
+    text-align: center;
+}
+.actionBtn a{
+    display: block;
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 3px;
+    background: var(--primaryColor);
+}
+.actionBtn a:hover{
+    background: var(--secondaryColor);
+    color: #fff;
+}
+.viewMoreBtn button a{
+    color: #fff;
+    background: goldenrod;
+    font-size: 1.7rem;
+    padding: 10px 15px;
+    margin-top: 40px;
+    border-radius: 3px;
+}
+.viewMoreBtn button a:hover{
+    box-shadow: 0px 0px 10px rgb(193, 193, 193);
+    background: rgb(247, 192, 53);
+}
+.viewMoreBtn button a:hover i{
+    margin-left: 5px;
+    /* background: #019cd4; */
+}
+
+/* ************ Loader Styling *************** */
+.loader{
+    width: 100%;
+    height: 100vh;
+    background: #eefbff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15000;
+    display: grid;
+    place-items: center;
+}
+.loader img{
+    width: 120px;
+}
+.loader h2 b{
+    font-size: 2rem;
+    margin-top: -10px;
+    display: inline-block;
+    font-weight: bolder;
+    color: #035775;
+    animation: loaderAni 1s linear infinite;
+}
+@keyframes loaderAni{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(50deg);
+        color: orange;
+    }
+}
+
+/* ************ lightBox Styling ************ */
+.lightBox{
+    width: 100%;
+    height: 100vh;
+    background: #000000e8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: scale(0);
+}
+.lightBox .box{
+    width: 65%;
+    height: 75%;
+    border: 1px solid gainsboro;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+.lightBox .box .closeBtn{
+    font-size: 2.5rem;
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.lightBox .box .closeBtn:hover{
+    background: rgb(190, 4, 4);
+}
+.lightBox .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lightBox .navBtn{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0%, -50%);
+    display: none !important;
+}
+.lightBox .navBtn button{
+    font-size: 3rem;
+    padding: 15px 8px;
+    background: darkorange;
+    color: #fff;
+    border: 1px solid #fff;
+    border-left: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.lightBox .navBtn button:hover{
+    background: #ca7103;
+    cursor: pointer;
+    padding-left: 9px;
+}
+
+/* ****** Parsley js ******* */
+.parsley-error{
+    background: #fcd5d5;
+}
+.parsley-success{
+    background: rgb(211, 252, 211);
+    color: green;
+}
+.parsley-errors-list{
+    display: none;
+}
+
+/* ******* Scroll bar ***** */
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #019cd4;
+}
+::-webkit-scrollbar-thumb{
+    background: #ee4657;
+    border-radius: 5px;
+}
+
+/* *********************************************************************************************************
+Start header section styling 
+********************************************************************************************************* */
+header{
+    width: 100%;
+}
+
+/* ******************** Start navTop styling ********************* */
+.navTop .row{
+    background: var(--primaryColor);
+    border-radius: 80px 15px;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+.navTop .row i{
+    font-size: 1.6rem;
+}
+.fa-phone{
+    width: 30px;
+    aspect-ratio: 1/1;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    animation: rotate360deg 1s linear infinite;
+}
+.fa-phone:hover{
+    animation-play-state: paused;
+    background: var(--secondaryColor);
+}
+@keyframes rotate360deg{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ******************** Start navBottom styling ********************* */
+header .navBottom{
+    width: 100%;
+    background: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0px 5px 10px #9898985c;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.navBottom .logo img{
+    width: 110px;
+}
+.navBottom .DeskTopManue ul li a {
+    display: inline-block;
+    padding: 5px 15px;
+    color: var(--secondaryColor);
+    font-weight: bold;
+    border-radius: 3px;
+}
+.navBottom .DeskTopManue ul li a i{
+    font-size: 1.2rem;
+    display: none;
+}
+.navBottom .DeskTopManue ul li a:hover{
+    background: var(--secondaryColor);
+    color: #fff;
+}
+
+/* ************************* Start hero styling ********************** */
+header .hero{
+    width: 100%;
+    height: 73vh;
+    background: linear-gradient(#2323239b, #2323239b), url(./assert/images/img6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+}
+.hero .headingText button a:hover{
+    background: darkorange !important;
+}
+.hero .headingText button a:hover i{
+    margin-left: 3px;
+}
+.hero .right .owlBox{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    background: #019cd438;
+    box-shadow: 0px 0px 10px #ee4657;
+}
+.hero .right .owlBox .item{
+    height: 300px;
+}
+.hero .right .owlBox .owl-nav{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.owlBox :is(.owl-prev, .owl-next) span{
+    display: inline-block;
+    background-color: #ee4657 !important;
+    padding: 5px 15px !important;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.hero .right .owlBox .item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+
+}
+
+
+/* *********************************************************************************************************
+Start main section styling 
+********************************************************************************************************* */
+main section{
+    width: 100%;
+    margin-bottom: 70px !important;
+}
+
+/* ***** Start about, gallary, shiftInfo, facilities, signUpForm styling ********* */
+main :is(.about, .gallary, .shiftInfo, .facilities, .signUpForm){
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+:is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) >img{
+    width: 100%;
+}
+
+:is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) .headerImg{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , 0);
+    color: #fff;
+}
+
+:is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) .headerImg img{
+    width: 75px;
+    height: 85px;
+}
+
+:is(.about, .gallary, .shiftInfo, .facilities, .signUpForm).middle img{
+    width: 60px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about .right iframe{
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* ********************** Start gallary section styling ********************* */
+:is(.gallary, .gallaryBox) .content img{
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: 350px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+:is(.gallary, .gallaryBox) .container .item{
+    position: relative;
+    overflow: hidden;
+}
+:is(.gallary, .gallaryBox) .container .item:hover :is(.textBox, button){
+    transform: scale(1);
+}
+:is(.gallary, .gallaryBox) .container .item:hover img{
+    transform: scale(1.1);
+}
+:is(.gallary, .gallaryBox) .container .textBox{
+    width: 100%;
+    height: 100%;
+    background: #0000009c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    color: #fff;
+}
+:is(.gallary, .gallaryBox) .textBox button{
+    background: goldenrod;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 10px 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #fff inset;
+    cursor: pointer;
+    transform: scale(0);
+}
+:is(.gallary, .gallaryBox) .textBox button:hover{
+    background: #019cd4;
+}
+
+/* ********************** Start shiftInfo section styling ********************* */
+.shiftInfo .row >div > div{
+    border: 2px solid darkorange;
+    padding: 3px;
+    box-shadow: 0px 0px 5px #bcbbbb;
+    position: relative;
+    overflow: hidden;
+}
+.shiftInfo .row .offer{
+    background-color: darkorange;
+    color: #fff;
+    padding: 10px;
+    transform: rotate(-45deg);
+    padding-top: 30px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #fff;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    font-size: 1.5rem;
+    color: darkgreen;
+}
+.shiftInfo .item{
+    padding: 20px 0;
+    background: var(--secondaryColor);
+    color: #fff;
+}
+.shiftInfo .row >div > div:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.shiftInfo .item:hover{
+    background: #02729b;
+}
+.shiftInfo .item button{
+    background: rgb(241, 180, 25);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+}
+.shiftInfo .item button:hover{
+    background: darkorange;
+    outline: 1.2px solid #fff;
+}
+
+/* ********************** Start facility section styling ********************* */
+.facilities .left ul li{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: start;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: rgb(52, 52, 52);
+    font-weight: bold;
+}
+.facilities .left ul li:hover i{
+    color: #ee4657;
+}
+.facilities .left ul li i{
+    color: #019cd4;
+    font-size: 4rem;
+    width: 60px;
+}
+
+.facilities .right iframe{
+    height: 320px;
+    width: 95%;
+    position: relative;
+    display: block;
+    z-index: 99;
+    background: #ee4657;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #1a1a1b70;
+}
+.facilities .right .circle{
+    position: absolute;
+    top: -32%;
+    left: -16%;
+    width: 200px;
+    border-radius: 100%;
+    height: 200px;
+    background: #ee4657;
+}
+
+/* ********************** Start signUpForm section styling ********************* */
+.signUpForm .left img{
+    width: 100%;
+}
+.signUpForm .right form{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    padding: 13px;
+    box-shadow: 0px 0px 5px #0000006a inset;
+    background: #019cd4;
+    color: #fff;
+}
+.signUpForm .right form .item :is(input, textarea, select){
+    margin: 5px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2px;
+}
+.signUpForm .right form .item :is(input, textarea, select):focus{
+    outline: 2px solid gold;
+    background: #d0f0fc;
+}
+.signUpForm .right form button[type = "submit"]{
+    width: 100%;
+    background-color: #035775;
+    color: #fff;
+    padding: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.signUpForm .right form button[type = "submit"]:hover{
+    outline: 1px solid #fff;
+    background: #02729b;
+}
+
+/* ********************** Start Location section styling ********************* */
+main .location iframe{
+    width: 100%;
+    min-height: 350px;
+}
+
+/* ********************** Start review's section styling ********************* */
+.reviews .item{
+    min-height: 200px;
+}
+.reviews .left .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.reviews .right .item{
+    background: #019cd4;
+    border: none !important;
+    border-radius: 5px !important;
+    overflow: hidden;
+}
+.reviews .item .box{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 200px;
+    border: 2px solid gold;
+    position: relative;
+    padding: 5px;
+}
+.reviews .item .box .userImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    transform: translate(20px, 20px);
+    border: 2px solid gold;
+    border-bottom: 2px solid #019cd4;
+    border-right: 2px solid #019cd4;
+}
+.reviews .item .box .google{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.reviews .item .box .textBox{
+    width: 70%;
+    margin-top: -35px;
+    margin-left: auto;
+    color: darkslategray;
+}
+.reviews .item .box .textBox i{
+    font-size: 1.7rem;
+    margin-left: 3px;
+}
+.reviews .item .box p{
+    font-size: 1.3rem;
+    width: 90%;
+    margin-top: 15px;
+    margin-left: auto;
+    color: gray;
+}
+.reviews .item button a{
+    background-color: #019cd4;
+    font-size: 1.6rem;
+    padding: 8px;
+    width: 100%;
+    display: block;
+    color: #fff;
+}
+.reviews .item button a:hover{
+    background: #02729b;
+}
+
+
+/* *********************************************************************************************************
+Start foote section styling 
+********************************************************************************************************* */
+footer{
+    width: 100%;
+    /* min-height: 400px; */
+    background-color: #2a2d2f;
+    margin-top: 70px;
+    color: #fff;
+}
+footer ul li{
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: rgb(181, 179, 179);
+    transition: all 0.2s;
+}
+footer ul li:hover{
+    color: rgb(252, 176, 71);
+}
+footer ul li:hover a i{
+    margin-right: 8px;
+}
+footer ul .socalMedia a{
+    font-size: 2.2rem;
+    margin-right: 10px;
+}
+footer address{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+footer .fotoerBottom{
+    background: #222222;
+    font-size: 1.5rem;
+}
+
+
+/* **********************************************************************************************************
+Start media querry
+********************************************************************************************************** */
+@media all and (max-width:992px){
+
+    .headingline{
+        width: 30% !important;
+    }
+    .navTop .row{
+        border-radius: 0;
+        padding: 5px;
+    }
+    .navBottom .logo img{
+        text-align: center;
+        margin: 0px auto;
+        display: block;
+    }
+    .navBottom .registorBtn{
+        text-align: center !important;
+    }
+    header .hero{
+        min-height: 100vh;
+    }
+    .hero .left{
+        text-align: center;
+    }
+    .hero .left h2{
+        font-size: 3rem;
+    }
+    .hero .left h1{
+        font-size: 3rem;
+    }
+    .hero .right .owlBox{
+        width: 90%;
+    }
+    :is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) >img{
+        height: 190px;
+    }
+    :is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) .headerImg{
+        font-size: 1.5rem;
+    }
+    .facilities .right video{
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+    }
+    .signUpForm .right form{
+        width: 100%;
+    }
+    .lightBox .box{
+        width: 85%;
+    }
+    .gallaryBox .gallaryHeading{
+        top: 180px !important;
+    }
+    .gallaryBox .content .item{
+        height: 420px;
+    }
+    .books .item img{
+        width: 85% !important;
+    }
+    .books .item button{
+        width: 85% !important;
+    } 
+}
+
+@media all and (max-width:768px){
+    :root{
+        font-size: 9px !important;
+    }
+    
+    .lightBox .box{
+        width: 85%;
+        height: 80%;
+    }
+
+    :is(.about, .gallary, .shiftInfo, .facilities, .signUpForm) .headerImg img{
+        width: 60px;
+        height: 75px;
+    }
+
+    
+}
+
+@media all and (max-width:576px){
+    .headingText{
+        font-size: 2rem;
+    }
+    .navBottom .DeskTopManue ul li a {
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+    .hero .right .owlBox{
+        width: 95%;
+    }
+    .books .item{
+        height: 400px !important;
+    }
+    .lightBox .box .closeBtn{
+        font-size: 1.6rem;
+        width: 35px;
+        height: 35px;
+        top: -10px;
+        right: -10px;
+    }
+    .lightBox .box{
+        width: 85%;
+        height: 50%;
+    }
+}

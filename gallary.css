@@ -1,0 +1,103 @@
+/* ******************************************************************************************************
+Start header > navBottom section styling 
+****************************************************************************************************** */
+header .navBottom ul li a{
+    background: #019cd4;
+    color: #fff !important;
+}
+.navBottom ul li a:hover{
+    background: #fff !important;
+    border: 1.5px solid #019cd4;
+    color: #019cd4 !important;
+}
+.navBottom ul li a:hover i{
+    margin-right: 5px;
+}
+
+/* ************** Srart gallaryHero section styling ************ */
+header .gallaryHero{
+    width: 100%;
+    min-height: 400px;
+}
+.gallaryHero .owlBox{
+    position: relative;
+}
+.gallaryHero .owlBox .owl-nav{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translate(0%, -66%);
+    display: flex;
+    justify-content: space-between;
+}
+.gallaryHero .owlBox .owl-nav button span{
+    font-size: 5rem;
+    background: #fdb015 !important;
+}
+.gallaryHero .item{
+    width: 100%;
+    height: 450px;
+}
+.gallaryHero .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ******************************************************************************************************
+Start main section styling 
+****************************************************************************************************** */
+main.gallaryMain{
+    width: 100%;
+}
+
+/* ********************* Start gallaryBox styling ******************* */
+.gallaryBox .gallaryHeading{
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(149, 148, 148, 0.552), 0px 0px 10px #b0e9fe98 inset ;
+    position: sticky;
+    top: 70px;
+    left: 0;
+    z-index: 998;
+}
+.gallaryHeading button{
+    padding: 8px 15px;
+    background: gainsboro;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: darkslategray;
+    box-shadow: -2px -2px 5px #cbcbcb inset;
+}
+
+.gallaryHeading .activeBtn{
+    background: #fdb015;
+    box-shadow: 0px 0px 2px #bc7e03 inset;
+    font-weight: bold;
+    color: #664503;
+}
+
+.gallaryBox .content .item{
+    height: 300px;
+    border: 1px solid #000;
+    width: 100%;
+}
+.gallaryBox .content .item img{
+    width: 100%;
+    height: 100%;
+}
+.gallaryBox .videoGallary{
+    display: none;
+}
+.gallaryBox .videoGallary .item iframe{
+    width: 100%;
+    height: 250px;
+    padding: 5px;
+    background-color: #bbe8f998;
+    object-fit: cover;
+    border: 5px groove #019cd4;
+
+}
+
